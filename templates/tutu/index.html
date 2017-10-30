@@ -1,0 +1,59 @@
+{% extends 'tutu/base.html' %}
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="/static/css/content.css">
+{% endblock header %}
+
+{% block content %}
+    <div class="box">
+        <div>
+            <table class="table  table-bordered">
+                <thead>
+                <tr>
+                    <th>图片</th>
+                    <th>标题</th>
+                    <th>简介</th>
+                    <th>来源</th>
+                    <th>类型</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in  list.object_list %}
+                    <tr>
+                        <td><a href="{{ item.url }}"> <img width="160px" height="160px"
+                                                           src="../../static/images/{{ item.imageurl }}"
+                                                           alt="文章图片" border="0" onerror></a>
+                        </td>
+                        <td><span>{{ item.title }}</span></td>
+                        <td><span>{{ item.content }}</span></td>
+                        <td width="60px"><span>{{ item.comefrom }}</span></td>
+                        <td width="60px"><span>{{ item.type }}</span></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pageShow">
+            {% if list.has_previous %}
+                <a class="enable_pre_page" href="?page={{ list.previous_page_number }}">上一页</a>
+            {% else %}
+                <span class="disable_pre_page">上一页</span>
+            {% endif %}
+
+            {% for num in indicator_num %}
+                <ul>
+                    <li><a href="?page={{ num }}">{{ num }} </a></li>
+                </ul>
+            {% endfor %}
+
+            {% if list.has_next %}
+                <a href="?page={{ list.next_page_number }}">下一页</a>
+            {% else %}
+                <span class="disable_pre_page">下一页</span>
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock content %}
+
+

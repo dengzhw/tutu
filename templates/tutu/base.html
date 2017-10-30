@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{{ title }}天天图图</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css">
+    {% block header %}
+    {% endblock header %}
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/static/js/setHomeSetFav.js"></script>
+    <script type="text/javascript " src="/static/js/myfocus-2.0.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/mf-pattern/mF_fancy.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/js/mf-pattern/mF_fancy.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="top">
+    <div class="top_content">
+        <ul>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#" onclick="AddFavorite(window.location,document.title)">加入收藏</a></li>
+            <li><a href="#" onclick="SetHome(window.location)">设为首页</a></li>
+        </ul>
+    </div>
+</div>
+<div class="wrap">
+    <div class="nav">
+        <div class="nav_left"></div>
+        <div class="nav_mid">
+            <div class="nav_mid_left">
+                <ul>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">搞笑</a></li>
+
+                </ul>
+            </div>
+            <div class="nav_mid_right">
+                <form action="" method="post">
+                    <input type="text" class="search_text"/>
+                </form>
+            </div>
+        </div>
+        <div class="nav_right"></div>
+    </div>
+</div>
+
+{% block content %}
+
+{% endblock content %}
+
+<div class="main_foot">
+    <div class="main_foot_link">
+        <a href="#">关于我们</a>
+        <span>|</span>
+        <a href="#">联系我们</a>
+        <span>|</span>
+        <a href="#">招聘人才</a>
+        <span>|</span>
+        <a href="#">友情链接</a>
+    </div>
+    <p>CopyRight © 2016 北京天天图图信息技术有限公司 All Rights Reserved</p>
+    <p>电话：010-****888 京ICP备*******8号</p>
+</div>
+
+</body>
+</html>
